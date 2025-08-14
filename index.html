@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ephemeral Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <div class="modal" id="nicknameModal">
+        <div class="modal-content">
+            <h2>Выберите никнейм</h2>
+            <input type="text" id="nicknameInput" placeholder="Ваш никнейм" maxlength="20">
+            <button id="setNickname">Продолжить</button>
+        </div>
+    </div>
+
+    <div class="chat-container" id="chatContainer" style="display: none;">
+        <header class="chat-header">
+            <h1>Ephemeral Chat</h1>
+            <p>Сообщения исчезают через 1 минуту</p>
+            <div class="current-user">Вы: <span id="currentNickname"></span></div>
+        </header>
+        <div class="messages" id="messages"></div>
+        <div class="message-input">
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+</body>
+</html>
