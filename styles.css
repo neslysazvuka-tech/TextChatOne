@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #333;
+    overscroll-behavior-y: none;
 }
 
 .chat-container {
@@ -47,6 +48,13 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    scrollbar-width: none;
+}
+
+.messages::-webkit-scrollbar {
+    display: none;
 }
 
 .message {
@@ -75,6 +83,7 @@ body {
     border-radius: 20px;
     outline: none;
     font-size: 1rem;
+    touch-action: manipulation;
 }
 
 .message-input button {
@@ -157,6 +166,18 @@ body {
     margin-bottom: 3px;
     display: flex;
     justify-content: space-between;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #6e8efb;
+    color: white;
+}
+
+.other-message {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+    color: #333;
 }
 
 .user-message .message-info {
